@@ -14,8 +14,8 @@ The main purpose of this image is to be used to show data from a [Home Assistant
 |--------------|-------|
 | Docker Image | 2.0.0 |
 | Ubuntu       | 16.04 |
-| InfluxDB     | 1.2   |
-| Grafana      | 4.1.1 |
+| InfluxDB     | 1.5.2 |
+| Grafana      | 5.1.4 |
 
 ## Quick Start
 
@@ -30,7 +30,7 @@ docker run -d \
   -p 22022:22 \
   -v /path/for/influxdb:/var/lib/influxdb \
   -v /path/for/grafana:/var/lib/grafana \
-  philhawthorne/docker-influxdb-grafana:latest
+  jamesgarner-me/docker-influxdb-grafana:latest
 ```
 
 To stop the container launch:
@@ -53,7 +53,7 @@ Host		Container		Service
 3003		3003			grafana
 3004		8083			influxdb-admin
 8086		8086			influxdb
-22022		22				sshd
+22022		22			sshd
 ```
 ## SSH
 
