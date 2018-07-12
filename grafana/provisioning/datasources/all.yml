@@ -1,0 +1,17 @@
+# provisioning/datasources/all.yml
+# https://github.com/jamesgarner-me/docker-influxdb-grafana/grafana/provisioning/datasources/all.yml
+
+apiVersion: 1
+
+datasources:
+- name: local-influxdb
+  type: influxdb
+  access: server
+  orgId: 1                              
+  url: http://localhost:8086            # url of the influxDB instance
+  database: data                        # name of the database in Influx - 'data'
+  user: root                            # InfluxDB username
+  password: root                        # InfluxDB password
+  editable: true
+  isDefault: true
+  version: 1

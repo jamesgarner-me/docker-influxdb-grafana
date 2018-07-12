@@ -30,7 +30,22 @@ docker run -d \
   -p 22022:22 \
   -v /path/for/influxdb:/var/lib/influxdb \
   -v /path/for/grafana:/var/lib/grafana \
-  jamesgarner-me/docker-influxdb-grafana:latest
+  -v /path/to/cloned/repo/grafana/provisioning/:/etc/grafana/provisioning/ \
+  jamesagarner/docker-influxdb-grafana:latest
+```
+
+For example:
+```sh
+docker run -d \
+  --name docker-influxdb-grafana \
+  -p 3003:3003 \
+  -p 3004:8083 \
+  -p 8086:8086 \
+  -p 22022:22 \
+  -v /Users/jagarner/github/docker-influxdb-grafana/data/influxdb:/var/lib/influxdb \
+  -v /Users/jagarner/github/docker-influxdb-grafana/data/grafana:/var/lib/grafana \
+  -v /Users/jagarner/github/docker-influxdb-grafana/grafana/provisioning/:/etc/grafana/provisioning/ \
+  jamesagarner/docker-influxdb-grafana:latest
 ```
 
 To stop the container launch:
